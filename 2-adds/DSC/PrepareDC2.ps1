@@ -1,4 +1,4 @@
-﻿configuration PrepareADBDC
+﻿configuration PrepareDC2
 {
    param
     (
