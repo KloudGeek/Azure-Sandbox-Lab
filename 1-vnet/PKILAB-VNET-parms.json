@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "northcentralus"
+    },
+    "name": {
+      "value": "PKILAB-VNET"
+    },
+    "addressPrefix": {
+      "value": "10.2.0.0/16"
+    },
+    "subnetName": {
+      "value": "PKILAB-SUBNET"
+    },
+    "subnetAddressPrefix": {
+      "value": "10.2.0.0/16"
+    },
+    "Dns Servers": {
+      "value": "10.3.0.4,10.3.0.5"
+    },
+    "enableDdosProtection": {
+      "value": false
+    }
+  }
+}
