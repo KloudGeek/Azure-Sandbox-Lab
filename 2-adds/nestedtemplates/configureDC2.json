@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
+  "contentVersion": "1.0.0.1",
   "parameters": {
-    "adBDCVMName": {
+    "DC2VMName": {
       "type": "string"
     },
     "location": {
@@ -10,7 +10,8 @@
       "defaultValue": "[resourceGroup().location]"
     },
     "adminUsername": {
-      "type": "string"
+      "type": "string",
+      "value": "local-admin"
     },
     "adminPassword": {
       "type": "securestring"
@@ -18,17 +19,17 @@
     "domainName": {
       "type": "string"
     },
-    "adBDCConfigurationFunction": {
+    "DC2ConfigurationFunction": {
       "type": "string"
     },
-    "adBDCConfigurationModulesURL": {
+    "DC2ConfigurationModulesURL": {
       "type": "string"
     }
   },
   "resources": [
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
-      "name": "[concat(parameters('adBDCVMName'),'/PrepareBDC')]",
+      "name": "[concat(parameters('DC2VMName'),'/PrepareDC2')]",
       "apiVersion": "2016-03-30",
       "location": "[parameters('location')]",
       "properties": {
@@ -37,9 +38,9 @@
         "typeHandlerVersion": "2.21",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "modulesURL": "[parameters('adBDCConfigurationModulesURL')]",
+          "modulesURL": "[parameters('DC2ConfigurationModulesURL')]",
           "wmfVersion": "4.0",
-          "configurationFunction": "[parameters('adBDCConfigurationFunction')]",
+          "configurationFunction": "[parameters('DC2ConfigurationFunction')]",
           "properties": {
             "domainName": "[parameters('domainName')]",
             "adminCreds": {

@@ -22,7 +22,7 @@
         {
             RebootNodeIfNeeded = $true
         }
-        
+
         xWaitForADDomain DscForestWait
         {
             DomainName = $DomainName
@@ -30,7 +30,7 @@
             RetryCount = $RetryCount
             RetryIntervalSec = $RetryIntervalSec
         }
-        xADDomainController BDC
+        xADDomainController DC2
         {
             DomainName = $DomainName
             DomainAdministratorCredential = $DomainCreds
@@ -61,7 +61,7 @@
 #>
         xPendingReboot RebootAfterPromotion {
             Name = "RebootAfterDCPromotion"
-            DependsOn = "[xADDomainController]BDC"
+            DependsOn = "[xADDomainController]DC2"
         }
 
     }

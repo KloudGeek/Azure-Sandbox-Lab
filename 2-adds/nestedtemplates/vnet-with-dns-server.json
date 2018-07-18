@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-  "contentVersion": "1.0.0.0",
+  "contentVersion": "1.0.0.1",
   "parameters": {
     "virtualNetworkName": {
       "type": "string",
@@ -13,7 +13,7 @@
       "metadata": {
         "Description": "The address range of the new VNET in CIDR format"
       },
-      "defaultValue": "10.0.0.0/16"
+      "defaultValue": "10.2.0.0/16"
     },
     "subnetName": {
       "type": "string",
@@ -26,7 +26,7 @@
       "metadata": {
         "Description": "The address range of the subnet created in the new VNET"
       },
-      "defaultValue": "10.0.0.0/24"
+      "defaultValue": "10.2.0.0/24"
     },
     "DNSServerAddress": {
       "type": "array",
