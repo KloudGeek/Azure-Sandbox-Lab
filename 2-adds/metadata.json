@@ -1,0 +1,9 @@
+{
+  "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+  "itemDisplayName": "Create an new AD Domain with 2 Domain Controllers",
+  "description": "This template creates 2 new VMs and configures AD DS a new Forest and Domain",
+  "summary": "This template creates 2 Azure VMs with AD DS",
+  "githubUsername": "joeemt",
+  "dateUpdated": "2018-07-18"
+}
+
