@@ -1,4 +1,4 @@
-﻿configuration CreateADPDC
+﻿configuration CreateDC1
 {
    param
    (
