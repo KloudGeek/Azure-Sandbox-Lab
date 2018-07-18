@@ -1,24 +1,24 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
+    "contentVersion": "1.0.0.1",
     "parameters": {
         "name": {
-            "type": "String"
+            "type": "string"
         },
         "location": {
-            "type": "String"
+            "type": "string"
         },
         "addressPrefix": {
-            "type": "String"
+            "type": "string"
         },
         "subnetName": {
-            "type": "String"
+            "type": "string"
         },
         "subnetAddressPrefix": {
-            "type": "String"
+            "type": "string"
         },
         "enableDdosProtection": {
-            "type": "Bool"
+            "type": "bool"
         }
     },
     "resources": [
